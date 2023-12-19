@@ -2,7 +2,6 @@
     <application
         android:label="progresssystem_splashscreen"
         android:name="${applicationName}"
-        //android:name="androidx.multidex.MultiDexApplication"
         android:icon="@drawable/sihbackground">
         <activity
             android:name=".MainActivity"
