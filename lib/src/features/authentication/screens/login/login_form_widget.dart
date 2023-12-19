@@ -94,16 +94,6 @@ class _LoginFormState extends State<LoginForm> {
                         ),
                       ),
                   ),
-                  /**Align(
-                    alignment: Alignment.centerRight,
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.only(left:5.0,right: 5.0),
-                        child: Text(tForgetPassword),
-                      ),
-                    ),
-                  ),**/
 
                   SizedBox(
                     width: double.infinity,
@@ -111,7 +101,7 @@ class _LoginFormState extends State<LoginForm> {
                       onPressed: () {
                         authController.signInWithEmailAndPassword(emailController.text, passwordController.text);
                       },
-                      child: Text(tLogin),
+                      child: const Text(tLogin),
                     ),
                   ),
                 ],

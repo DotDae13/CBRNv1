@@ -15,10 +15,12 @@ class AuthController extends GetxController {
         password: password,
       );
 
+
       // Access user information from the credential
       final user = credential.user;
       print('User ID: ${user?.uid}');
       print('User Email: ${user?.email}');
+
 
       // Navigate to the home screen after successful sign-in
       Get.to(Dashboard());

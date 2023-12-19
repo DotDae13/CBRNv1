@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:progresssystem_splashscreen/src/features/authentication/screens/dashboard/dashboard_screen.dart';
 import 'package:progresssystem_splashscreen/src/features/authentication/screens/login/login_screen.dart';
 import 'package:progresssystem_splashscreen/src/constants/image_strings.dart';
 import 'package:progresssystem_splashscreen/src/constants/sizes.dart';

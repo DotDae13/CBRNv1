@@ -25,5 +25,15 @@ const String tWelcomeSubTitle = "Based on CBRN for NDRF personnel";
 //--Login Screen Text
 const String tLoginTitle = "Welcome";
 const String tLoginSubTitle = "Hi! User";
+//--Dashboard Screen Text
+const String tDashboardTitle = "Hey! User";
+const String tDashboardHeading = "CBRN Training";
+const String tDashboardSearch = "Search";
+const String tDashboardBannerTitle1 = "Chemical";
+const String tDashboardBannerTitle2 = "Biological";
+const String tDashboardBannerTitle3 = "Radiological";
+const String tDashboardBannerTitle4 = "Nuclear";
+const String tDashboardButton = "View";
+const String tDashboardTopCourses = "More";
 
 
