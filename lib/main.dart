@@ -20,9 +20,10 @@ void main() {
 }
 
 class App extends StatelessWidget {
-  //final AuthController authController = Get.put(AuthController());
-  //final FirebaseController firebaseController = Get.put(FirebaseController());
+
   App({super.key});
+
+  final AuthController authController = Get.put(AuthController());
 
   // This widget is the root of your application.
   @override
@@ -32,7 +33,7 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: YourHomePage(),
+      home: SplashScreen(),
 
     );
   }

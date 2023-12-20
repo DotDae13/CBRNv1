@@ -1,16 +1,23 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'package:progresssystem_splashscreen/src/constants/colors.dart';
 import 'package:progresssystem_splashscreen/src/constants/image_strings.dart';
 import 'package:progresssystem_splashscreen/src/constants/text_strings.dart';
+import 'package:progresssystem_splashscreen/src/features/authentication/screens/chemical/chemicalTrainings.dart';
+import 'package:progresssystem_splashscreen/src/features/authentication/screens/test/test_screen.dart';
 
 import '../../../../constants/sizes.dart';
+import '../../controllers/firebase_controller.dart';
 
 class Dashboard extends StatelessWidget {
 
-  const Dashboard({super.key});
+  //final FirebaseController firebaseController = Get.put(FirebaseController());
+
+  Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,26 +62,32 @@ class Dashboard extends StatelessWidget {
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     children: [
-                      SizedBox(
-                          width: 175,
-                          height: 50,
-                          child: Row(
-                            children: [
-                              Image.asset("assets/images/dashboard/dash1.png"),
-                              Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),),
-                                child: Center(
-                                  child: Text("Chemical",
-                                    style: txtTheme.headline6?.apply(
-                                        color: Colors.black),),
-                                ),
+                      GestureDetector(
+                        onTap: () async {
+                          //await firebaseController.getBestTime('unreal@gmail.com');
+                          Get.to(ChemicalTraining());
+                        },
+                        child: SizedBox(
+                            width: 175,
+                            height: 50,
+                            child: Row(
+                              children: [
+                                Image.asset("assets/images/dashboard/dash1.png"),
+                                Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),),
+                                  child: Center(
+                                    child: Text("Chemical",
+                                      style: txtTheme.headline6?.apply(
+                                          color: Colors.black),),
+                                  ),
 
-                              ),
-                            ],
-                          )
+                                ),
+                              ],
+                            )
+                        ),
                       ),
                       SizedBox(
                           width: 175,

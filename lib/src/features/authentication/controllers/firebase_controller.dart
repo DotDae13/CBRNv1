@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FirebaseController extends GetxController {
@@ -6,14 +7,14 @@ class FirebaseController extends GetxController {
 
   RxString bestTime = ''.obs;
 
-  Future<void> getBestTime(String userEmail) async {
+  Future<void> getBestTime(userEmail, String industry/**, String trainingName**/) async {
     try {
       DocumentSnapshot<Map<String, dynamic>> snapshot =
-      await _firestore.collection('Users').doc(userEmail).collection('Chemical').doc('firstTraining').get();
+      await _firestore.collection('Users').doc(userEmail).collection(industry).doc('firstTraining').get();
 
       if (snapshot.exists) {
         final Map<String, dynamic> data = snapshot.data()!;
-        bestTime.value = data['Health'] ?? '';
+        bestTime.value = data['Best Time'] ?? '';
       } else {
         // Handle case when document does not exist
         print('Document does not exist');

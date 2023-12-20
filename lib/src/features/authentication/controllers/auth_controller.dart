@@ -6,6 +6,7 @@ import 'package:progresssystem_splashscreen/src/features/authentication/screens/
 
 class AuthController extends GetxController {
   RxBool isLoading = false.obs;
+  Rxn<User> currentUser = Rxn<User>();
 
   Future<void> signInWithEmailAndPassword(String emailAddress, String password) async {
     try {
@@ -15,12 +16,7 @@ class AuthController extends GetxController {
         password: password,
       );
 
-
-      // Access user information from the credential
-      final user = credential.user;
-      print('User ID: ${user?.uid}');
-      print('User Email: ${user?.email}');
-
+      currentUser.value = credential.user;
 
       // Navigate to the home screen after successful sign-in
       Get.to(Dashboard());

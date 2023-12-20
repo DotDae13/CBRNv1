@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../controllers/firebase_controller.dart';
 
 
-class YourHomePage extends StatelessWidget {
+class TestScreen extends StatelessWidget {
 
   final FirebaseController firebaseController = Get.put(FirebaseController());
 
@@ -18,13 +18,13 @@ class YourHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(() => Text('Health: ${firebaseController.bestTime}')),
-            ElevatedButton(
+            Obx(() => Text('Best Time: ${firebaseController.bestTime}')),
+            /**ElevatedButton(
               onPressed: () async {
                 await firebaseController.getBestTime('unreal@gmail.com');
               },
-              child: Text('Get Health'),
-            ),
+              child: Text('Best Time'),
+            ),**/
           ],
         ),
       ),
