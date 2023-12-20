@@ -18,7 +18,7 @@ class TestScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(() => Text('Best Time: ${firebaseController.bestTime}')),
+            Obx(() => Text('Grade Point: ${firebaseController.gradePoint}')),
             /**ElevatedButton(
               onPressed: () async {
                 await firebaseController.getBestTime('unreal@gmail.com');

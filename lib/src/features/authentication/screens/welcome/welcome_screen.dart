@@ -16,7 +16,7 @@ class WelcomeScreen extends StatelessWidget {
     var brightness = mediaQuery.platformBrightness;
     final isDarkMode = brightness == Brightness.dark;
     return Scaffold(
-      backgroundColor: isDarkMode ? tSecondaryColor : tPrimaryColor,
+        backgroundColor: isDarkMode ? tSecondaryColor : tPrimaryColor,
         body: Container(
           padding:EdgeInsets.all(tDefaultSize),
           child: Column(
@@ -28,29 +28,29 @@ class WelcomeScreen extends StatelessWidget {
               Column(
                 children: [
                   Text(tWelcomeTitle,
-                      style: Theme.of(context).textTheme.headline3,),
+                    style: Theme.of(context).textTheme.headline3,),
                   Text(tWelcomeSubTitle,
-                     style: Theme.of(context).textTheme.headline3,
-                     textAlign: TextAlign.center),
+                      style: Theme.of(context).textTheme.headline3,
+                      textAlign: TextAlign.center),
                 ],
               ),
               Row(
                 children: [
                   Expanded(
-                      child: OutlinedButton(
-                          onPressed: () => Get.to(() => const LoginScreen()),
+                    child: OutlinedButton(
+                      onPressed: () => Get.to(() => LoginScreen()),
 
-                          child: Text(tLogin,),
-                      ),
+                      child: Text(tLogin,),
+                    ),
                   ),
-                 /** const SizedBox(width: 10.0,),
-                  Expanded(
+                  /** const SizedBox(width: 10.0,),
+                      Expanded(
                       child: ElevatedButton(
-                          onPressed: (){},
+                      onPressed: (){},
 
-                          child: Text(tSignUp)
+                      child: Text(tSignUp)
                       ),
-                  ),**/
+                      ),**/
                 ],
               )
             ],
